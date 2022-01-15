@@ -32,3 +32,28 @@ p {
 .descripcion-pagina{
     text-align: center;
 }
+
+.swal2-html-container{
+    font-size: 2rem !important;
+}
+
+.swal2-title{
+    font-size: 3.6rem !important;
+}
+
+.swal2-confirm{
+    padding: 1.5rem 2rem !important;
+}
+
+.swal2-actions{
+    font-size: 2rem !important;
+}
+
+.swal2-icon {
+    &.swal2-success{
+        &.swal2-icon-show{
+            width: 5rem !important;
+            height: 5rem !important;
+        }
+    } 
+}
