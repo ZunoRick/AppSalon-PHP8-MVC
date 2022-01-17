@@ -178,7 +178,7 @@ function seleccionarFecha() {
     });
 }
 
-function seleccionarHora(params) {
+function seleccionarHora() {
     const inputHora = document.querySelector('#hora');
     inputHora.addEventListener('input', e =>{
         const horaCita = e.target.value;
