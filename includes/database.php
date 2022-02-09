@@ -1,13 +1,13 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 
-$host = 'localhost';
-$username = 'root';
-$passwd = 'root';
-$dbname = 'appsalon';
-$port = 3310;
-
-$db =  mysqli_connect($host, $username, $passwd, $dbname, $port);
+$db =  mysqli_connect(
+    $_ENV['DB_HOST'], 
+    $_ENV['DB_USER'], 
+    $_ENV['DB_PASS'], 
+    $_ENV['DB_NAME'], 
+    $_ENV['DB_PORT']
+);
 $db -> set_charset('utf8');
 
 if (!$db) {

@@ -33,7 +33,7 @@ class ServicioController{
                     break;
 
                 default:
-                    # code...
+                    header('Location: /servicios');
                     break;
             }
             $alertas = Servicio::getAlertas();
@@ -120,17 +120,5 @@ class ServicioController{
             $servicio->eliminar();
             header('Location: /servicios?err_no=102');
         }
-    }
-
-    public static function indexServicios(Router $router){
-        $alertas = Servicio::getAlertas();
-        $servicios = Servicio::all();
-
-        $router->render('servicios/index', [
-            'nombre' => $_SESSION['nombre'],
-            'servicios' => $servicios,
-            'alertas' => $alertas
-        ]);
-        header('Location: /servicios');
     }
 }
