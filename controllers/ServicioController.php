@@ -81,10 +81,10 @@ class ServicioController{
         if (!is_numeric($_GET['id']))  {
             header('Location: /servicios?err_no=101');
         }
-        
         $servicio = Servicio::find($_GET['id']);
         $alertas = [];
         
+        debuguear($servicio);
         // debuguear($servicio);
         if (!$servicio) {
             header('Location: /servicios?err_no=101');
