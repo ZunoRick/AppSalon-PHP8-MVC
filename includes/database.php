@@ -6,7 +6,7 @@ $db =  mysqli_connect(
     $_ENV['DB_USER'], 
     $_ENV['DB_PASS'], 
     $_ENV['DB_NAME'], 
-    $_ENV['DB_PORT']
+    $_ENV['DB_PORT'] ?? ''
 );
 $db -> set_charset('utf8');
 
