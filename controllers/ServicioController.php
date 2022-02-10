@@ -72,7 +72,6 @@ class ServicioController{
     }
 
     public static function actualizar(Router $router){
-        debuguear($_GET['id']);
         if (!isset($_SESSION)) {
             session_start();
         }
