@@ -72,6 +72,7 @@ class ServicioController{
     }
 
     public static function actualizar(Router $router){
+        debuguear($_SERVER['REQUEST_URI']);
         if (!isset($_SESSION)) {
             session_start();
         }
@@ -84,7 +85,6 @@ class ServicioController{
         $servicio = Servicio::find($_GET['id']);
         $alertas = [];
         
-        debuguear($servicio);
         // debuguear($servicio);
         if (!$servicio) {
             header('Location: /servicios?err_no=101');
