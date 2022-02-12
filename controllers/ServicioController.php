@@ -7,6 +7,7 @@ use MVC\Router;
 
 class ServicioController{
     public static function index(Router $router){
+        debuguear($_SERVER['REQUEST_URI']);
         if (!isset($_SESSION)) {
             session_start();
         }
